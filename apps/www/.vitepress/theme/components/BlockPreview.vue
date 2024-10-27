@@ -12,6 +12,10 @@ const props = defineProps<{
 const isLoading = ref(true)
 
 const iframeURL = computed(() => {
+  // @ts-expect-error env available in import.meta
+  if (import.meta.env.SSR)
+    return ''
+
   const url = new URL(`${window.location.origin}/blocks/renderer`)
   Object.entries(props).forEach(([key, value]) => {
     if (value)
