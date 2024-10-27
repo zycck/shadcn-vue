@@ -10,8 +10,8 @@ catalogs:
       specifier: ^0.29.0
       version: 0.29.0
     radix-vue:
-      specifier: ^1.9.6
-      version: 1.9.7
+      specifier: ^1.9.8
+      version: 1.9.8
     typescript:
       specifier: ^5.6.3
       version: 5.6.3
@@ -118,7 +118,7 @@ importers:
         version: 0.30.12
       radix-vue:
         specifier: 'catalog:'
-        version: 1.9.7(vue@3.5.12(typescript@5.6.3))
+        version: 1.9.8(vue@3.5.12(typescript@5.6.3))
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.14)
@@ -127,7 +127,7 @@ importers:
         version: 3.1.2(@popperjs/core@2.11.8)(vue@3.5.12(typescript@5.6.3))
       vaul-vue:
         specifier: ^0.2.0
-        version: 0.2.0(radix-vue@1.9.7(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3))
+        version: 0.2.0(radix-vue@1.9.8(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3))
       vee-validate:
         specifier: 4.13.2
         version: 4.13.2(vue@3.5.12(typescript@5.6.3))
@@ -299,7 +299,7 @@ importers:
         version: 2.4.2
       radix-vue:
         specifier: 'catalog:'
-        version: 1.9.7(vue@3.5.12(typescript@5.6.3))
+        version: 1.9.8(vue@3.5.12(typescript@5.6.3))
       semver:
         specifier: ^7.6.3
         version: 7.6.3
@@ -6376,8 +6376,8 @@ packages:
   quickselect@2.0.0:
     resolution: {integrity: sha512-RKJ22hX8mHe3Y6wH/N3wCM6BWtjaxIyyUIkpHOvfFnxdI4yD4tBXEBKSbriGujF6jnSVkJrffuo6vxACiSSxIw==}
 
-  radix-vue@1.9.7:
-    resolution: {integrity: sha512-1xleWzWNFPfAMmb81gu/4/MV8dXMvc7j2EIjutBpBcKwxdJfeIcQg4k9De18L2rL1/GZg5wA9KykeKTM4MjWow==}
+  radix-vue@1.9.8:
+    resolution: {integrity: sha512-4GvWHDhvyfo/Dih5BveUni/iZqENQ6iXXyVjRBewhFdEfnwE/Jl6NBNhcwrNi+XWjiJBJOY4B2ObQ/c7s+KsJA==}
     peerDependencies:
       vue: '>= 3.2.0'
 
@@ -14869,7 +14869,7 @@ snapshots:
 
   quickselect@2.0.0: {}
 
-  radix-vue@1.9.7(vue@3.5.12(typescript@5.6.3)):
+  radix-vue@1.9.8(vue@3.5.12(typescript@5.6.3)):
     dependencies:
       '@floating-ui/dom': 1.6.11
       '@floating-ui/vue': 1.1.5(vue@3.5.12(typescript@5.6.3))
@@ -16096,10 +16096,10 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vaul-vue@0.2.0(radix-vue@1.9.7(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3)):
+  vaul-vue@0.2.0(radix-vue@1.9.8(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3)):
     dependencies:
       '@vueuse/core': 10.11.1(vue@3.5.12(typescript@5.6.3))
-      radix-vue: 1.9.7(vue@3.5.12(typescript@5.6.3))
+      radix-vue: 1.9.8(vue@3.5.12(typescript@5.6.3))
       vue: 3.5.12(typescript@5.6.3)
     transitivePeerDependencies:
       - '@vue/composition-api'
