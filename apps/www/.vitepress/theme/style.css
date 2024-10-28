@@ -127,6 +127,15 @@
 		scrollbar-color: hsl(215.4 16.3% 56.9% / 0.3);
 	}
 
+  html.dark .shiki,
+  html.dark .shiki span {
+    color: var(--shiki-dark);
+  }
+  html:not(.dark) .shiki,
+  html:not(.dark) .shiki span {
+    color: var(--shiki-light);
+  }
+
 	.antialised {
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -154,7 +163,7 @@
 }
 
 div[class^="language-"] {
-	@apply mb-4 mt-6 max-h-[650px] overflow-x-auto md:rounded-lg border !bg-secondary-foreground dark:!bg-secondary
+	@apply mb-4 mt-6 max-h-[650px] overflow-x-auto md:rounded-lg border
 }
 pre {
 	@apply py-4;

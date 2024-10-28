@@ -53,10 +53,10 @@ import { Switch } from '@/components/ui/switch'
 ```vue
 <template>
   <Switch :checked="isDark" @update:checked="toggleTheme">
-      <template #thumb>
-          <Icon v-if="isDark" icon="lucide:moon" class="size-3"></Icon>
-          <Icon v-else icon="lucide:sun" class="size-3"></Icon>
-      </template>
+    <template #thumb>
+      <Icon v-if="isDark" icon="lucide:moon" class="size-3" />
+      <Icon v-else icon="lucide:sun" class="size-3" />
+    </template>
   </Switch>
 </template>
 ```
