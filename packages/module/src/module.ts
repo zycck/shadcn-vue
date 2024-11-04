@@ -63,11 +63,7 @@ export default defineNuxtModule<ModuleOptions>({
     await installModule('@nuxtjs/tailwindcss')
 
     // Installs the `@nuxtjs/color-mode` module.
-    await installModule('@nuxtjs/color-mode', {
-      colorMode: {
-        classSuffix: '',
-      },
-    })
+    await installModule('@nuxtjs/color-mode')
 
     // Manually scan `componentsDir` for components and register them for auto imports
     try {
