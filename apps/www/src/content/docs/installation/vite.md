@@ -47,11 +47,11 @@ Install `tailwindcss` and its peer dependencies, then generate your `tailwind.co
 ```typescript {3,4,11-15}
 import { fileURLToPath, URL } from 'node:url'
 
-import autoprefixer from 'autoprefixer'
-import tailwind from 'tailwindcss'
-
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import autoprefixer from 'autoprefixer'
+
+import tailwind from 'tailwindcss'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -128,11 +128,11 @@ npm i -D @types/node
 ```typescript {20-22}
 import { fileURLToPath, URL } from 'node:url'
 
-import autoprefixer from 'autoprefixer'
-import tailwind from 'tailwindcss'
-
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import autoprefixer from 'autoprefixer'
+
+import tailwind from 'tailwindcss'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({

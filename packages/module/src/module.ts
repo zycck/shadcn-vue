@@ -59,8 +59,10 @@ export default defineNuxtModule<ModuleOptions>({
       })
     })
 
-    // Installs the `@nuxtjs/color-mode` module.
+    // Install the `@nuxtjs/tailwindcss` module.
+    await installModule('@nuxtjs/tailwindcss')
 
+    // Installs the `@nuxtjs/color-mode` module.
     await installModule('@nuxtjs/color-mode', {
       colorMode: {
         classSuffix: '',
@@ -90,7 +92,7 @@ export default defineNuxtModule<ModuleOptions>({
                 name: `${prefix}${key}`, // name of the component to be used in vue templates
                 export: key, // (optional) if the component is a named (rather than default) export
                 filePath: resolve(filePath),
-                priority: 1
+                priority: 1,
               })
             })
           }

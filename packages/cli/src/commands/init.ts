@@ -4,11 +4,10 @@ import { Command } from 'commander'
 import { consola } from 'consola'
 import { colors } from 'consola/utils'
 import { template } from 'lodash-es'
-import { addDependency, addDevDependency } from 'nypm'
+import { addDependency } from 'nypm'
 import ora from 'ora'
 import path from 'pathe'
 import prompts from 'prompts'
-import { gte } from 'semver'
 import { z } from 'zod'
 import {
   type Config,
@@ -39,9 +38,6 @@ const PROJECT_DEPENDENCIES = {
     'clsx',
     'tailwind-merge',
     'radix-vue',
-  ],
-  nuxt: [
-    '@nuxtjs/tailwindcss',
   ],
 }
 
@@ -310,23 +306,13 @@ export async function runInit(cwd: string, config: Config) {
   // Install dependencies.
   const dependenciesSpinner = ora('Installing dependencies...')?.start()
 
-  // Starting from `shadcn-nuxt` version 0.10.4, Base dependencies are handled by the module so no need to re-add them by the CLI
-  const baseDeps = gte(shadcnNuxt?.version || '0.0.0', '0.10.4') ? [] : PROJECT_DEPENDENCIES.base
   const iconsDep = config.style === 'new-york' ? ['@radix-icons/vue'] : ['lucide-vue-next']
-  const deps = baseDeps.concat(iconsDep).filter(Boolean)
+  const deps = PROJECT_DEPENDENCIES.base.concat(iconsDep).filter(Boolean)
 
-  await Promise.allSettled(
-    [
-      config.framework === 'nuxt' && await addDevDependency(PROJECT_DEPENDENCIES.nuxt, {
-        cwd,
-        silent: true,
-      }),
-      await addDependency(deps, {
-        cwd,
-        silent: true,
-      }),
-    ],
-  )
+  await addDependency(deps, {
+    cwd,
+    silent: true,
+  })
 
   dependenciesSpinner?.succeed()
 }
