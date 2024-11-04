@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
+      - run: pnpm dlx changelogithub
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
       - name: Build CLI & Publish to npm
         run: pnpm --filter shadcn-vue pub:release
         env:
@@ -33,7 +37,3 @@ jobs:
         run: pnpm --filter shadcn-nuxt pub:release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - run: pnpm dlx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
