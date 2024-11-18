@@ -9,7 +9,7 @@ import {
   FormMessage,
 } from '@/lib/registry/new-york/ui/form'
 import { Input } from '@/lib/registry/new-york/ui/input'
-import { toast } from '@/lib/registry/new-york/ui/toast'
+import { toast, Toaster } from '@/lib/registry/new-york/ui/toast'
 import { vAutoAnimate } from '@formkit/auto-animate/vue'
 
 import { toTypedSchema } from '@vee-validate/zod'
@@ -34,6 +34,7 @@ const onSubmit = handleSubmit((values) => {
 </script>
 
 <template>
+  <Toaster />
   <form class="w-2/3 space-y-6" @submit="onSubmit">
     <FormField v-slot="{ componentField }" name="username" :validate-on-blur="!isFieldDirty">
       <FormItem v-auto-animate>
